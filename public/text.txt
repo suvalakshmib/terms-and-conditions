@@ -1,0 +1,26 @@
+const allTextNodes = document.createTreeWalker(
+  document.body,
+  NodeFilter.SHOW_TEXT
+);
+let allText = "";
+while (allTextNodes.nextNode()) {
+  allText += allTextNodes.currentNode.textContent;
+}
+//got all text and stored in below data variable
+const data = allText;
+allText = allText.trim().replace(/^\s+|\s+$/gm, " ");
+
+//sending those above data to local storage using the key 'dataName'
+localStorage.setItem("dataName", data);
+export default const popupcontent = localStorage.getItem(JSON.parse("dataName"));
+//in the above ,by using getItem data are fetched from local storage
+//sending data to the background script below line
+console.log("Sending message with data: " + data);
+chrome.runtime.sendMessage({ data: data });
+
+let myParagraph = document.createElement("p");
+myParagraph.textContent = data;
+document.body.appendChild(myParagraph);
+console.log(myParagraph);
+
+//export default popupcontent = myParagraph

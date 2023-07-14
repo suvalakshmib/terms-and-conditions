@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Extension Popup</title>
+    <link rel="stylesheet" type="text/css" href="loading.css" />
+    <!-- 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> -->
+  </head>
+  <body>
+    <div class="parent">
+      <div class="wrapper">
+        <div class="navbar flex">
+          <div class="nav-left flex">
+            <div class="logo">
+              <img class="clock-img" src="assests/clock.svg" alt="logo" />
+              <div class="terms">
+                <p class="terms-f1">Terms and conditions</p>
+                <p class="terms-f2">checker</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-right flex">
+            <a href="">Sign in</a>
+            <a href="">Sign up</a>
+          </div>
+        </div>
+
+        <div class="Heading-text">
+          <p class="Heading">
+            Simplify your agreements; Identify your key points,issues.
+          </p>
+
+          <div>
+            <!-- <textarea class="text-area" id="data-input" maxlength="17000" rows="10" cols="60" >    </textarea> -->
+            <div
+              contenteditable="true"
+              class="text-area"
+              id="data-input"
+              rows="10"
+              cols="60"
+            >
+              <div
+                contenteditable="true"
+                style="display: inline"
+                id="current1"
+              ></div>
+              <div
+                contenteditable="true"
+                style="display: inline"
+                id="extra1"
+              ></div>
+              <div></div>
+            </div>
+          </div>
+          <div id="the-count">
+            <span id="current"></span>
+            <span id="extra"></span>
+          </div>
+          <div class="btn-flex">
+            <button id="check" class="check-agreement" disabled>
+              <span><img class="check-img" src="./assests/Vector.png" /></span>
+              Check Agreement
+            </button>
+            <button
+              id="delete-button"
+              contenteditable="false"
+              class="del-btn"
+              style="display: block"
+            >
+              <span>
+                <img class="check-img1" src="./assests/Icon Left.svg" />
+              </span>
+              Remove Extra Characters
+            </button>
+          </div>
+          <p class="or-text">OR</p>
+          <p class="text">
+            To check the agreement on this page click below,to get a summary and
+            grade of it.
+          </p>
+          <button id="checkpage" class="check-agreement check-agreement1" disabled>
+            Check this page
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="text.js" defer></script>
+    <script src="background.js" async defer></script>
+  </body>
+</html>

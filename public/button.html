@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>My Extension Popup</title>
+    <link rel="stylesheet" type="text/css" href="loading.css" />
+  </head>
+  <body>
+    <div class="parent-button">
+      <div class="parent-two">
+        <div class="center">
+          <!-- loader -->
+          <div class="lds-ring" id="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="nav flex">
+          <div class="header-bar">
+            <img class="clock-img" src="./assests/clock.png" />
+            <div class="terms">
+              <p class="terms-f1">Terms and conditions</p>
+              <p class="terms-f2">checker</p>
+            </div>
+          </div>
+          <div>
+            <button id="back">
+              <img class="img-back" src="./assests/arrow.png" />
+            </button>
+            <button id="close">
+              <img class="img-close" src="./assests/close.png" />
+            </button>
+          </div>
+        </div>
+        <div id="content" class="content-terms-parent flex">
+          <div class="Terms-parent">
+            <div class="terms-content">
+              <p class="accept">Acceptance of terms:</p>
+              <p id="data"></p>
+            </div>
+          </div>
+          <div class="content">
+            <div id="header">
+              <p id="header-text">
+                The terms and conditions seem to be fair to all parties
+                involved.
+              </p>
+            </div>
+            <div class="tab-parent">
+              <div class="tabs">
+                <div class="tab-2">
+                  <label class="tab-label" id="summary-id" for="tab2-1"
+                    >summary</label
+                  >
+                  <input
+                    id="tab2-1"
+                    name="tabs-two"
+                    type="radio"
+                    checked="checked"
+                  />
+                  <div class="sum">
+                    <ul id="summary">
+                      <span
+                        ><img src="./assests/view.png" class="span-element"
+                      /></span>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tab-2">
+                  <label class="tab-label" id="problems-id" for="tab2-2"
+                    >Problems</label
+                  >
+                  <input id="tab2-2" name="tabs-two" type="radio" />
+                  <div class="sum">
+                    <ul id="problems">
+                      <span
+                        ><img src="./assests/view.png" class="span-element" />
+                      </span>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
